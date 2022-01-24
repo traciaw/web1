@@ -1,0 +1,338 @@
+/*
+All font-family to Open Sans, sans-serif;
+All text color to #515151
+apply box-sizing as border-box
+*/
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color: #01161E;
+    box-sizing: border-box;
+}
+
+/*
+h1- 30px, h2- 28px, h3- 26px, h4-24px, h5-22px
+*/
+h1{
+    font-size: 30pt;
+}
+
+h2{
+    font-size: 28pt;
+}
+
+h3{
+    font-size: 26pt;
+}
+
+h4{
+    font-size: 24pt;
+}
+
+h5{
+    font-size: 22pt;
+}
+
+header{
+    display: flex;
+}
+
+.logo{
+display: flex;
+color: #8A97A8;
+justify-content: center;
+align-items:center; /*for the word to be centered*/
+}
+
+.desktop{
+display:flex;
+width: 100%;
+justify-content: flex-end;
+}
+
+/*
+Links
+-all paddings 15px
+-remove underline from the links
+*/
+
+.desktop>a {
+    padding: 15px;
+    text-decoration: none;
+}
+.mobile{
+    display: none;
+}
+
+/*
+section 1
+
+*/
+.section1{
+    display: flex;
+    background-color:  #BA6F4D;
+    padding: 30px 20px;
+    border-image-width: 60%;
+}
+
+
+/*.section1(space)img or .section1>img also can as there is only 1 img*/
+.section1 img{
+    width:60%;
+}
+
+/*section 1-content
+left padding = 25px
+align the text to center
+*/
+.section1-content{
+    padding-left: 25px;
+    align-self: center;
+}
+/*section1-content link styling*/
+.section1-content>a {
+    background-color: #3a3535;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: 60%;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-top: 10px;
+}
+/*section1-content link hover styling*/
+.section1-content> a:hover{
+    background-color: #A9A9A9;
+}
+
+.section2{
+    display:flex;
+    background-color: whitesmoke;
+    padding: 30px 20px;
+}
+
+.section2 img{
+    max-width:100%;
+}
+
+.s2-rightContent{
+    padding: 30px 50px;
+}
+.s2-box1, .s2-box2, .s2-box3{
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.s2-box1, .s2-box2, .s2-box3> img{
+    width:40%;
+}
+
+
+/*Start of section3*/
+.section3 img{
+    max-width:100%;
+    height:auto;
+}
+
+.s3title {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.s3boxes{
+    display:flex;
+    flex-direction: column;
+    padding:0px 72px 32px 72px;
+     
+}
+
+.s3row1{
+    display: flex;
+    gap: 32px;
+  
+}
+
+.s3row2{
+    display:flex;
+    padding-top: 32px;
+    gap: 32px;
+   
+    
+}
+
+.rowsingle{
+display:flex;
+flex-direction: column;
+
+}
+
+.rowtextbox1{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    border:2px solid #3a3535;
+}
+
+.rowtextbox1 img{
+ 
+
+}
+
+.textboxtitle{
+
+
+}
+
+.textboxcourses{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.textboxmsg{
+
+}
+
+/*End of section3*/
+
+
+
+/*Start of section 4*/
+.s4title{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.s4content{
+    display:flex;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    gap: 24px;
+     }
+
+.video{
+
+}
+
+
+.s4right{
+    display:flex;
+ 
+    flex-direction: column;
+    }
+
+
+.s4mini{
+    display:flex;
+    padding: 16px;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.s4mini:nth-child(1) {
+    background-color: #8A97A8;
+  }
+
+.s4minipic{
+
+}
+
+.s4minitext{
+    width:65%;
+}
+
+.vidbox{
+
+    padding-left: 24px;
+
+}
+
+.vidtitle{
+
+}
+
+.vidmsg{
+    padding-top: 8px;
+    padding-bottom: 32px;
+}
+/*End of section 4*/
+
+/*Footer start*/
+footer{
+    display:flex;
+    border-top: solid #9fa7b1;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+}
+
+/*section1 mobile view styling*/
+@media screen and (max-width: 720px) 
+{/*whatever CSS styling in the {} will be applied to devices breakpoint <=720px*/
+    
+    /*
+    h1- 26px, h2- 24px, h3- 22px, h4-20px, h5-18px
+    */
+    h1{
+        font-size: 26pt;
+    }
+
+    h2{
+        font-size: 24pt;
+    }
+
+    h3{
+        font-size: 22pt;
+    }
+
+    h4{
+        font-size: 20pt;
+    }
+
+    h5{
+        font-size: 18pt;
+    }
+
+
+    .desktop, .logo{
+        /*hide desktop icon and logo when in mobile view*/
+        display:none;
+    }
+    .mobile{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .section1, .section2{
+        flex-direction: column;
+    }
+    .section1, .section2>img{
+        width:100%;
+    }
+    .s2-box1, .s2-box2, .s2-box3{
+        flex-direction: column;
+    }
+
+    .s2-box1, .s2-box2, .s2-box3>img{
+        width: 100%;
+    }
+
+    .rowsingle>img{
+        display:none;
+    }
+    .textboxtitle{
+        font-size:large;
+    }
+    .textboxcourses, .textboxmsg, .s4right, .vidbox{
+        display: none;
+    }
+    .s3row1, .s3row2{
+        flex-direction: column;
+    }
+}
