@@ -7,6 +7,7 @@ apply box-sizing as border-box
 body{
     font-family: "Open Sans", sans-serif;
     color: #01161E;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
@@ -39,9 +40,15 @@ header{
 
 .logo{
 display: flex;
-color: #8A97A8;
+padding-left: 24px;
 justify-content: center;
 align-items:center; /*for the word to be centered*/
+}
+
+.logo:after{
+    content:'ACADEMY';
+    color:slategrey;
+    font-size: 24pt;
 }
 
 .desktop{
@@ -59,6 +66,7 @@ Links
 .desktop>a {
     padding: 15px;
     text-decoration: none;
+    color: slategrey;
 }
 .mobile{
     display: none;
@@ -70,8 +78,8 @@ section 1
 */
 .section1{
     display: flex;
-    background-color:  #BA6F4D;
-    padding: 30px 20px;
+    background-color:  rgba(207, 203, 203, 0.911);
+    padding: 32px 24px;
     border-image-width: 60%;
 }
 
@@ -82,16 +90,25 @@ section 1
 }
 
 /*section 1-content
-left padding = 25px
+left padding = 24px
 align the text to center
 */
 .section1-content{
-    padding-left: 25px;
+    padding-left: 24px;
     align-self: center;
 }
 /*section1-content link styling*/
-.section1-content>a {
-    background-color: #3a3535;
+.s1t1{
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.s1t2{
+    font-weight: bold;
+}
+
+.s1t2>a {
+    background-color:slategrey ;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -102,34 +119,89 @@ align the text to center
     margin-top: 10px;
 }
 /*section1-content link hover styling*/
-.section1-content> a:hover{
-    background-color: #A9A9A9;
+.s1t2> a:hover{
+    background-color: darkolivegreen;
 }
 
+/*section 2 css*/
 .section2{
     display:flex;
-    background-color: whitesmoke;
-    padding: 30px 20px;
+    padding-top: 32px;
+    gap:24px;
+}
+
+.section2 a{
+    text-decoration: none;
 }
 
 .section2 img{
     max-width:100%;
 }
 
+.s2-leftContent{
+    flex-basis: 60%;
+    padding-left: 24px;
+}
+
+.s2lefttext{
+    padding-top: 32px;
+}
+
+.s2left1{
+    font-weight: bold;
+}
+
+.s2left2{
+    padding-top: 24px;
+}
+
+.s2left3{
+    padding-top: 24px;
+   padding-bottom: 32px; 
+}
 .s2-rightContent{
-    padding: 30px 50px;
+display:flex;
+flex-direction: column;
+flex-basis: 40%;
 }
 .s2-box1, .s2-box2, .s2-box3{
-    display:flex;
-    margin-bottom: 10px;
+display:flex;
+gap: 16px;
 }
 
 .s2-box1, .s2-box2, .s2-box3> img{
-    width:40%;
+    flex-basis:35%;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.s2-box2, .s2-box3 >img{
+    padding-top: 16px;
 }
 
 
+.s2-box3{
+    background-color: rgba(207, 203, 203, 0.911);
+}
+
+.s2righttext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s2r1{
+    font-weight: bold;
+}
+
+.s2r2{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 /*Start of section3*/
+
+
 .section3 img{
     max-width:100%;
     height:auto;
@@ -139,33 +211,30 @@ align the text to center
     padding-top: 32px;
     padding-bottom: 32px;
     text-align: center;
+    font-weight:bold;
 }
 
 .s3boxes{
     display:flex;
     flex-direction: column;
-    padding:0px 72px 32px 72px;
-     
+    padding:0px 72px 32px 72px;     
 }
 
 .s3row1{
     display: flex;
-    gap: 32px;
-  
+    gap: 32px;  
 }
 
 .s3row2{
     display:flex;
     padding-top: 32px;
-    gap: 32px;
-   
+    gap: 32px; 
     
 }
 
 .rowsingle{
 display:flex;
 flex-direction: column;
-
 }
 
 .rowtextbox1{
@@ -173,18 +242,15 @@ flex-direction: column;
     flex-direction: column;
     padding-top: 16px;
     padding-bottom: 24px;
-    padding-left: 16px;
-    border:2px solid #3a3535;
-}
-
-.rowtextbox1 img{
- 
-
+    padding-left: 16px;   
 }
 
 .textboxtitle{
+    font-weight: bold;
+}
 
-
+.textboxcourses, .textboxmsg{
+    color: gray;
 }
 
 .textboxcourses{
@@ -192,79 +258,71 @@ flex-direction: column;
     padding-bottom: 8px;
 }
 
-.textboxmsg{
-
-}
-
 /*End of section3*/
 
 
 
 /*Start of section 4*/
-.s4title{
+.s4header {
     padding-top: 32px;
     padding-bottom: 32px;
     text-align: center;
+    font-weight: bold;
 }
 
 .s4content{
-    display:flex;
-    padding-left: 24px;
-    padding-bottom: 24px;
-    gap: 24px;
-     }
-
-.video{
-
+    display: flex;
+    margin-bottom: 32px;
+    gap:24px;
 }
 
+.s4left{
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    width:60%;
+}
+
+.v2{
+    padding-top: 24px;
+    font-weight: bold;
+}
+.v3{
+    padding-top: 8px;
+}
 
 .s4right{
-    display:flex;
- 
+    display: flex;
+    flex-basis: 40%;
     flex-direction: column;
-    }
-
-
-.s4mini{
-    display:flex;
-    padding: 16px;
-    gap: 16px;
-    align-items: flex-start;
+}
+.s4r1, .s4r2{
+    display: flex;
+    align-items: center;
+  
 }
 
-.s4mini:nth-child(1) {
-    background-color: #8A97A8;
-  }
 
-.s4minipic{
-
+.s4r1{
+    background-color: slategrey;
 }
 
-.s4minitext{
-    width:65%;
+.s4r1 img, .s4r2 img{
+    padding:16px;
+    flex-basis: 35%;
 }
 
-.vidbox{
-
-    padding-left: 24px;
-
+.s4t1{
+    font-weight: bold;
+    padding-bottom: 16px;
 }
 
-.vidtitle{
-
-}
-
-.vidmsg{
-    padding-top: 8px;
-    padding-bottom: 32px;
-}
 /*End of section 4*/
 
 /*Footer start*/
 footer{
     display:flex;
-    border-top: solid #9fa7b1;
+    border-top: solid rgba(207, 203, 203, 0.911);
     padding-top: 16px;
     padding-left: 24px;
     padding-bottom: 30px;
@@ -309,30 +367,63 @@ footer{
         justify-content: space-around;
         margin-top: 10px;
     }
+
+    .section1-content{
+        align-items: center;
+    }
     .section1, .section2{
         flex-direction: column;
+        align-items: center;
     }
-    .section1, .section2>img{
+    .section1 img{
         width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
+
+
     .s2-box1, .s2-box2, .s2-box3{
         flex-direction: column;
     }
 
     .s2-box1, .s2-box2, .s2-box3>img{
-        width: 100%;
+        width: auto;
     }
 
-    .rowsingle>img{
+    .rowsingle >img{
         display:none;
+    }
+    .rowsingle{
+        background-color: rgba(207, 203, 203, 0.911);
+        padding-top: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        row-gap: 8px;
     }
     .textboxtitle{
         font-size:large;
     }
-    .textboxcourses, .textboxmsg, .s4right, .vidbox{
+    .textboxcourses, .textboxmsg, .s4right, .vidbox, .s2-leftContent{
         display: none;
     }
     .s3row1, .s3row2{
         flex-direction: column;
+    }
+    
+    .s4header, .s3title{
+        padding-bottom: 16px;
+        padding-top: 32px;
+    }
+
+    .s4right{
+        display: none;
+    }
+    .v2, .v3{
+        display: none;
+    }
+
+    .s4content{
+        justify-content: center;
     }
 }
